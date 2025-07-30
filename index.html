@@ -64,9 +64,16 @@
       border: 2px solid var(--accent); border-radius: 40px;
       display: inline-flex; align-items: center; gap: 10px;
       transition: all 0.3s;
+      animation: pulse 2.8s infinite;
     }
     .btn:hover, .subscribe-btn:hover {
       background: var(--accent); color: white; transform: scale(1.03);
+    }
+
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(255,186,133,0.5); }
+      70% { box-shadow: 0 0 0 10px rgba(255,186,133,0); }
+      100% { box-shadow: 0 0 0 0 rgba(255,186,133,0); }
     }
 
     .section { padding: 100px 20px; max-width: 900px; margin: auto; text-align: center; }
@@ -121,6 +128,11 @@
       font-size: 14px;
       opacity: 0.5;
     }
+
+    .burger i.rot {
+      transform: rotate(90deg);
+      transition: transform 0.3s ease;
+    }
   </style>
 </head>
 <body>
@@ -128,21 +140,26 @@
     <a href="#about">Обо мне</a>
     <a href="#donate">Сотрудничество</a>
   </div>
+
   <nav>
     <div class="burger" onclick="toggleMenu(this)">
       <i class="bi bi-list"></i>
     </div>
     <div class="socials">
       <a href="https://instagram.com/arisha.001" target="_blank"><i class="bi bi-instagram"></i></a>
-      <a href="https://t.me/arisha001" target="_blank"><i class="bi bi-telegram"></i></a>
+      <a href="https://www.tiktok.com/@ariina.001?_t=ZS-8yPVlbD09E9&_r=1" target="_blank"><i class="bi bi-tiktok"></i></a>
+      <a href="https://t.me/arishaa001" target="_blank"><i class="bi bi-telegram"></i></a>
     </div>
   </nav>
 
   <section class="hero" id="home">
     <h1>Arisha.001</h1>
     <p><i class="bi bi-star-fill"></i> Digital Muse • Model • [Moscow]</p>
-    <a href="#donate" class="btn"><i class="bi bi-heart"></i> Donate</a>
+    <a href="https://donate.example.com/?ref=arisha001" class="btn" target="_blank">
+      <i class="bi bi-heart"></i> Donate
+    </a>
   </section>
+
   <section class="section" id="about">
     <h2><i class="bi bi-person-hearts"></i> Обо мне</h2>
     <p>
@@ -166,7 +183,7 @@
       </div>
     </div>
 
-    <a href="https://t.me/arisha001" class="subscribe-btn" target="_blank">
+    <a href="https://t.me/MoyaArishaBot" class="subscribe-btn" target="_blank">
       <i class="bi bi-telegram"></i> Подписаться на канал
     </a>
 
@@ -182,7 +199,6 @@
         <div class="circle"><img src="arisha8.JPG" alt=""></div>
         <div class="circle"><img src="arisha9.JPG" alt=""></div>
         <div class="circle"><img src="arisha10.JPG" alt=""></div>
-        <!-- повтор для бесконечной прокрутки -->
         <div class="circle"><img src="arisha1.JPG" alt=""></div>
         <div class="circle"><img src="arisha2.JPG" alt=""></div>
         <div class="circle"><img src="arisha3.JPG" alt=""></div>
@@ -191,9 +207,9 @@
       </div>
     </div>
   </section>
+
   <section class="section" id="donate">
     <h2><i class="bi bi-chat-heart-fill"></i> Сотрудничество</h2>
-
     <div class="marquee">
       <div class="marquee-content">
         <span><i class="bi bi-camera-reels"></i>#интеграции</span>
@@ -204,7 +220,6 @@
         <span><i class="bi bi-magic"></i>#digitalмуза</span>
       </div>
     </div>
-
     <p>
       Я работаю с брендами, которым важны вайб, вкус и свет.  
       Вижу эстетику в каждом кадре, умею ловить настроение и усиливать визуал проектов.  
@@ -212,9 +227,8 @@
       <br><br>
       Если вы хотите выразить смысл своего продукта через стиль — я рядом.
     </p>
-
     <div style="margin-top: 40px;">
-      <a href="https://t.me/arisha001" class="btn" target="_blank">
+      <a href="https://t.me/arishaa001" class="btn" target="_blank">
         <i class="bi bi-telegram"></i> Предложить сотрудничество
       </a>
     </div>
@@ -245,6 +259,5 @@
       });
     });
   </script>
-
 </body>
 </html>
